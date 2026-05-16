@@ -3,11 +3,17 @@
 import { useRef, useState, useEffect } from "react";
 import { useScroll, useTransform, motion, useSpring } from "motion/react";
 
-export default function SequenceScroll() {
+interface SequenceScrollProps {
+  onVideoReady?: () => void;
+}
+
+export default function SequenceScroll({ onVideoReady }: SequenceScrollProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
@@ -26,19 +32,18 @@ export default function SequenceScroll() {
     restDelta: 0.001
   });
 
-  // Reduced Phases:
-  // 0.00 - 0.40: Intro
-  // 0.60 - 1.00: Finale
-  
   const opacity0 = useTransform(smoothProgress, [0, 0.3, 0.45], [1, 1, 0]);
   const opacity90 = useTransform(smoothProgress, [0.55, 0.7, 1], [0, 1, 1]);
 
   const y0 = useTransform(smoothProgress, [0, 0.4], [0, -40]);
   const y90 = useTransform(smoothProgress, [0.55, 0.7], [40, 0]);
 
-  // Display transform to ensure inactive phases are completely removed from render tree
   const display0 = useTransform(opacity0, (v) => v === 0 ? "none" : "flex");
   const display90 = useTransform(opacity90, (v) => v === 0 ? "none" : "flex");
+
+  // Rules of Hooks: Hooks must be called before any conditional returns
+  // We remove the early return to ensure containerRef is always attached to the DOM
+  // which prevents "Target ref is defined but not hydrated" errors.
 
   return (
     <section ref={containerRef} className="relative h-[300vh] bg-background">
@@ -50,6 +55,7 @@ export default function SequenceScroll() {
           loop 
           muted 
           playsInline 
+          onCanPlayThrough={onVideoReady}
           className={`absolute inset-0 w-full h-full object-cover opacity-50 ${isMobile ? "scale-[1.02]" : "scale-100"}`}
         >
           <source src={isMobile ? "/videobg-mobile.webm" : "/video-bg.webm"} type="video/webm" />
