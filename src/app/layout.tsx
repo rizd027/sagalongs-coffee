@@ -16,8 +16,11 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Sagalong's Coffee",
-  description: "A premium coffee experience. Taste the extraordinary.",
+  title: "Sagalong's Coffee | The Architecture of Taste",
+  description: "Experience the extraordinary with our premium coffee selection. Sagalong's Coffee - Where architecture meets flavor.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
