@@ -50,7 +50,6 @@ export default function SequenceScroll({ onVideoReady }: SequenceScrollProps) {
       <div className="sticky top-0 h-[100svh] w-full overflow-hidden">
         {/* Video Background */}
         <video 
-          key={isMobile ? "mobile" : "desktop"}
           autoPlay 
           loop 
           muted 
@@ -58,7 +57,9 @@ export default function SequenceScroll({ onVideoReady }: SequenceScrollProps) {
           onCanPlayThrough={onVideoReady}
           className={`absolute inset-0 w-full h-full object-cover opacity-50 ${isMobile ? "scale-[1.02]" : "scale-100"}`}
         >
-          <source src={isMobile ? "/videobg-mobile.mp4" : "/video-bg.mp4"} type="video/mp4" />
+          {/* Smart video loading: Browser automatically downloads only the matching file */}
+          <source src="/videobg-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
+          <source src="/video-bg.mp4" type="video/mp4" media="(min-width: 768px)" />
         </video>
         
         {/* Darker Overlay for better text contrast */}
