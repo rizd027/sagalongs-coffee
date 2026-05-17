@@ -160,7 +160,7 @@ export default function Navbar() {
                 <div className="space-y-4">
                   <h4 className="text-accent text-[9px] tracking-[0.3em] uppercase font-bold">Connect</h4>
                   <div className="flex flex-col gap-2 text-xs md:text-sm text-foreground/60">
-                    <a href="#" className="hover:text-accent transition-colors">Instagram</a>
+                    <a href="https://www.instagram.com/sagalongscoffee/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Instagram</a>
                     <a href="#" className="hover:text-accent transition-colors">TikTok</a>
                   </div>
                 </div>

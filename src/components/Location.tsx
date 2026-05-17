@@ -39,11 +39,11 @@ export default function Location() {
                 <div>
                   <h4 className="text-xs uppercase tracking-[0.2em] font-bold text-accent mb-2">Location</h4>
                   <p className="text-lg font-light text-[#fdfdfc] leading-relaxed">
-                    Jl. Sagalong No. 123, <br />
-                    Kecamatan Rasa, Kota Coffee <br />
-                    Indonesia 12345
+                    C6Q8+8MV, Jabon, <br />
+                    Kec. Jombang, Kabupaten Jombang, <br />
+                    Jawa Timur 61419
                   </p>
-                  <a href="#" className="inline-flex items-center gap-2 text-accent text-xs uppercase tracking-[0.2em] font-bold mt-4 hover:gap-4 transition-all duration-300">
+                  <a href="https://www.google.com/maps/search/?api=1&query=C6Q8%2B8MV,+Jabon,+Kec.+Jombang,+Kabupaten+Jombang,+Jawa+Timur+61419" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-accent text-xs uppercase tracking-[0.2em] font-bold mt-4 hover:gap-4 transition-all duration-300">
                     Open in Maps <ExternalLink size={12} />
                   </a>
                 </div>

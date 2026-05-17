@@ -218,7 +218,7 @@ export default function Menu() {
               <div className="flex gap-4 text-[#2c241f]/40 text-xs uppercase tracking-[0.2em]">
                 <a href="#" className="hover:text-accent transition-colors">@sagalongs.coffee</a>
                 <span className="opacity-20">|</span>
-                <a href="#" className="hover:text-accent transition-colors">Instagram</a>
+                <a href="https://www.instagram.com/sagalongscoffee/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Instagram</a>
                 <span className="opacity-20">|</span>
                 <a href="#" className="hover:text-accent transition-colors">TikTok</a>
               </div>

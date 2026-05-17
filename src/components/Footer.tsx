@@ -10,24 +10,12 @@ export default function Footer() {
             Architecting the future of the coffee ritual. Every bean tells a story of geological time and human precision.
           </p>
         </div>
-        
-        <div>
-          <h3 className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent mb-8">Navigation</h3>
-          <ul className="flex flex-col gap-4 text-foreground/40 text-xs md:text-sm font-light">
-            <li><a href="#" className="hover:text-accent transition-colors duration-300">The Series</a></li>
-            <li><a href="#" className="hover:text-accent transition-colors duration-300">Architecture</a></li>
-            <li><a href="#" className="hover:text-accent transition-colors duration-300">Subscriptions</a></li>
-            <li><a href="#" className="hover:text-accent transition-colors duration-300">Collective</a></li>
-          </ul>
-        </div>
 
         <div>
           <h3 className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent mb-8">Legal & Press</h3>
           <ul className="flex flex-col gap-4 text-foreground/40 text-xs md:text-sm font-light">
-            <li><a href="#" className="hover:text-accent transition-colors duration-300">Inquiries</a></li>
             <li><a href="#" className="hover:text-accent transition-colors duration-300">Privacy Policy</a></li>
             <li><a href="#" className="hover:text-accent transition-colors duration-300">Terms of Service</a></li>
-            <li><a href="#" className="hover:text-accent transition-colors duration-300">Journal</a></li>
           </ul>
         </div>
       </div>
@@ -35,9 +23,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-[10px] text-foreground/20 border-t border-white/5 pt-12">
         <div className="uppercase tracking-[0.2em]">&copy; {new Date().getFullYear()} Sagalong&apos;s Coffee. Built with architectural intent.</div>
         <div className="flex gap-8 mt-6 md:mt-0 uppercase tracking-[0.2em]">
-          <a href="#" className="hover:text-accent transition-colors duration-300">Instagram</a>
-          <a href="#" className="hover:text-accent transition-colors duration-300">Vimeo</a>
-          <a href="#" className="hover:text-accent transition-colors duration-300">Twitter</a>
+          <a href="https://www.instagram.com/sagalongscoffee/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors duration-300">Instagram</a>
+          <a href="#" className="hover:text-accent transition-colors duration-300">Tiktok</a>
         </div>
       </div>
     </footer>
