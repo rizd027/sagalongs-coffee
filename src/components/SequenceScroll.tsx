@@ -58,7 +58,7 @@ export default function SequenceScroll({ onVideoReady }: SequenceScrollProps) {
           onCanPlayThrough={onVideoReady}
           className={`absolute inset-0 w-full h-full object-cover opacity-50 ${isMobile ? "scale-[1.02]" : "scale-100"}`}
         >
-          <source src={isMobile ? "/videobg-mobile.webm" : "/video-bg.webm"} type="video/webm" />
+          <source src={isMobile ? "/videobg-mobile.mp4" : "/video-bg.mp4"} type="video/mp4" />
         </video>
         
         {/* Darker Overlay for better text contrast */}
